@@ -1,0 +1,27 @@
+{
+  "name": "json-patch-transaction-core",
+  "version": "1.0.0",
+  "description": "In-memory, transactional RFC 6902 JSON Patch library (add/remove/replace/move/copy/test) with copy-on-write semantics.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "pretest": "tsc -p tsconfig.json && tsc -p tsconfig.test.json",
+    "test": "node --test dist-test/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3"
+  }
+}
